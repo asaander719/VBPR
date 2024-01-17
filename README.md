@@ -5,16 +5,22 @@ In terms of the latent visual encoder's input, we leverage pretrained visual fea
 
 ## Dataset: IQON3000 
 - You may refer to the the public dataset IQON3000 we use in the paper at:
+
   https://xuemengsong.github.io/fp506-songA.pdf
 
 - Download and unzip the datasets with indexed and pretrained visual feature, then move them to **./dataset/** from: 
+
   https://drive.google.com/file/d/1gIiLTJ9UJDm8nsdC0Kc9PMKavuSUNDd1/view?usp=sharing
 
 - You may also refer to the raw data and images from GP-BPR :) 
+
   https://github.com/hanxjing/GP-BPR
 
-- We keep the same data process and setting as GP-BPR, where each sample in train/valid/test csv files is formated as "user_ID, top_ID, pos_bottom_ID, neg_bottom_ID", and we further index them as "user_ID_index, top_ID_index, pos_bottom_ID_index, neg_bottom_ID_index" according to **dataset/IQON3000/data/user_map.json** and **dataset/IQON3000/data/item_map.json**. However, user information is not useful in our model.
+- We keep the same data process and setting as GP-BPR, where each sample in train/valid/test csv files is formated as:
+ "user_ID, top_ID, pos_bottom_ID, neg_bottom_ID", and we further index them as "user_ID_index, top_ID_index, pos_bottom_ID_index, neg_bottom_ID_index" according to **dataset/IQON3000/data/user_map.json** and **dataset/IQON3000/data/item_map.json**. However, user information is not useful in our model.
 
 ## Run VBPR
 
-Change the setting in the config file, then `python run_VBPR.py`.
+Change the setting in the config file, then 
+
+`python run_VBPR.py`.
